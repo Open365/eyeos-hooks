@@ -1,0 +1,17 @@
+set -e
+
+### UNIT TESTS
+./node_modules/.bin/_mocha -u tdd src/test
+
+### INTEGRATION TESTS (in some repos)
+if [ -f "test-dev.sh" ];then
+	./test-dev.sh
+elif [ -f "integration-test.sh" ];then
+	./integration-test.sh
+fi
+
+### COMPONENT TESTS (if the EXECUTE_COMPONENT_TEST envar is setted)
+if env | grep -q ^EXECUTE_COMPONENT_TEST=
+then
+	./node_modules/.bin/execute-component-tests --timeout 60000
+fi

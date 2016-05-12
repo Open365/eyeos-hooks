@@ -1,0 +1,16 @@
+{
+  "name": "eyeos-hooks",
+  "version": "0.0.189",
+  "description": "Library to start the eyeos hooks on a repo",
+  "scripts": {
+    "postinstall": "node start.js"
+  },
+  "author": "eyeos",
+  "devDependencies": {
+    "eyeos-gruntfile": "*",
+    "grunt": "0.4.5",
+    "grunt-init": "0.2.1",
+    "grunt-shell": "0.7.0"
+  },
+  "license": "AGPL-3.0"
+}
