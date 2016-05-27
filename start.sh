@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # See how many times 'node_modules' apear in path, if more than one, it is a module of a module and we don't do anyhting
 nodeModulesTimesInPath=$(echo $PWD | sed 's/node_modules/node_modules\n/g' | grep -c 'node_modules')
